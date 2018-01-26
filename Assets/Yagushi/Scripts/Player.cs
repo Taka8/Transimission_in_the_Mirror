@@ -17,7 +17,7 @@ public class Player : CharacterBase
 
     }
 
-    public override void ApplyDamage()
+    public override void ApplyDamage(int damage)
     {
         throw new System.NotImplementedException();
     }

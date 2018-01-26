@@ -4,6 +4,6 @@ using UnityEngine;
 
 public abstract class CharacterBase : MonoBehaviour, IApplicableDamage {
 
-    public abstract void ApplyDamage();
+    public abstract void ApplyDamage(int damage);
 
 }

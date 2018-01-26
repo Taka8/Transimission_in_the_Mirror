@@ -4,6 +4,6 @@ using UnityEngine;
 
 public interface IApplicableDamage {
 
-    void ApplyDamage();
+    void ApplyDamage(int damage);
 	
 }
