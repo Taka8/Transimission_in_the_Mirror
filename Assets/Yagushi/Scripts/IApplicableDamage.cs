@@ -2,15 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IApplicableDamage : MonoBehaviour {
+public interface IApplicableDamage {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
+    void ApplyDamage();
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }

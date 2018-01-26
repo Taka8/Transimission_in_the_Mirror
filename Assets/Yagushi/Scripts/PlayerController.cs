@@ -2,15 +2,31 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(PlayerMover))]
 public class PlayerController : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
+    [SerializeField] PlayerMover playerMover;
+
+    float hInput;
+    float vInput;
+
+    private void Reset()
+    {
+        playerMover = GetComponent<PlayerMover>();
+    }
+
+    void Update () {
+
+        hInput = Input.GetAxis("Horizontal");
+        vInput = Input.GetAxis("Vertical");
+
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+    private void FixedUpdate()
+    {
+
+        playerMover.Move(hInput, vInput, Time.fixedDeltaTime);
+
+    }
+
 }
