@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class CharacterBase : MonoBehaviour, IApplicableDamage {
+public abstract class CharacterBase : MonoBehaviour{
 
-    public abstract void ApplyDamage(int damage);
+
 
 }

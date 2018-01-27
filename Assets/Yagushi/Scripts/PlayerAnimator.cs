@@ -25,5 +25,10 @@ public class PlayerAnimator : MonoBehaviour
         this.isAttacking = isAttacking;
         animator.SetBool("Attack", isAttacking);
     }
+
+    public void animateDeath()
+    {
+
+    }
     
 }

@@ -2,23 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerHealth : CharacterHealth
+public class EnemyHealth : CharacterHealth
 {
-
-    [SerializeField] PlayerAnimator playerAnimator;
-
-    void Reset()
-    {
-        playerAnimator = GetComponent<PlayerAnimator>();    
-    }
 
     public override void ApplyDamage(int damage)
     {
         currentHealth -= damage;
+        if (currentHealth <= 0) Death();
     }
 
     public override void Death()
     {
-        playerAnimator.animateDeath();
+        Destroy(gameObject);
     }
+
 }

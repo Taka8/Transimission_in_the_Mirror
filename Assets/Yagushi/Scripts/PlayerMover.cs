@@ -10,13 +10,13 @@ public class PlayerMover : MonoBehaviour
     [SerializeField] PlayerAnimator playerAnimator;
 
     Vector3 moveInput;
-    
+
     private void Reset()
     {
         rb = GetComponent<Rigidbody>();
         playerAnimator = GetComponent<PlayerAnimator>();
     }
-    
+
     public void Move(float h, float v)
     {
 
@@ -28,13 +28,15 @@ public class PlayerMover : MonoBehaviour
         {
             transform.rotation = Quaternion.LookRotation(moveInput.normalized);
         }
-        
+
+        float vy = rb.velocity.y;
+
         // 移動
-        rb.velocity = transform.forward * moveSpeed * moveInput.magnitude;
+        rb.velocity = transform.forward * moveSpeed * moveInput.magnitude + Vector3.up * vy;
 
         // アニメーション
         playerAnimator.aanimateMove(rb.velocity.magnitude);
-        
+
     }
 
     public void Attack(bool isAttacking)
