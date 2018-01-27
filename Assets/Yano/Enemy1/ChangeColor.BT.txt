@@ -1,0 +1,13 @@
+tree("Root")
+	sequence
+		Wait(3.0)
+		MoveToPlayer()
+		Wait(3.0)
+		Idle()
+		Wait(3.0)
+		MoveToPlayer()		
+		Attack()
+		Wait(1.0)
+		Attack()
+		Wait(1.0)
+		MoveToPlayer()
