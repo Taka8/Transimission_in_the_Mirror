@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        playerMover.Move(hInput, vInput, Time.fixedDeltaTime);
+        playerMover.Move(hInput, vInput);
     }
 
 }
