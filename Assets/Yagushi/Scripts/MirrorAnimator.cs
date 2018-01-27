@@ -16,6 +16,7 @@ public class MirrorAnimator : MonoBehaviour
     void Update()
     {
         animator.SetFloat("Velocity", playerAnimator.velocity);
+        animator.SetBool("Attack", playerAnimator.isAttacking);
     }
 
 }

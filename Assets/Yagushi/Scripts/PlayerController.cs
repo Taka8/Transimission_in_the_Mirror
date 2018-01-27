@@ -20,6 +20,8 @@ public class PlayerController : MonoBehaviour
     {
         hInput = Input.GetAxis("Horizontal");
         vInput = Input.GetAxis("Vertical");
+
+        playerMover.Attack(Input.GetButton("Fire1"));
     }
 
     private void FixedUpdate()

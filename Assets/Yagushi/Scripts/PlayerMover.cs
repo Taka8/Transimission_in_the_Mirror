@@ -33,9 +33,13 @@ public class PlayerMover : MonoBehaviour
         rb.velocity = transform.forward * moveSpeed * moveInput.magnitude;
 
         // アニメーション
-        playerAnimator.Locomote(rb.velocity.magnitude);
+        playerAnimator.aanimateMove(rb.velocity.magnitude);
         
+    }
 
+    public void Attack(bool isAttacking)
+    {
+        playerAnimator.animateAttack(isAttacking);
     }
 
 }

@@ -14,13 +14,13 @@ public class PlayerAnimator : MonoBehaviour
         animator = GetComponentInChildren<Animator>();
     }
     
-    public void Locomote(float velocity)
+    public void aanimateMove(float velocity)
     {
         this.velocity = velocity;
         animator.SetFloat("Velocity", velocity);
     }
 
-    public void Attack(bool isAttacking)
+    public void animateAttack(bool isAttacking)
     {
         this.isAttacking = isAttacking;
         animator.SetBool("Attack", isAttacking);
