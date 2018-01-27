@@ -5,6 +5,11 @@ using UnityEngine;
 public class EnemyHealth : CharacterHealth
 {
 
+    void Start()
+    {
+        currentHealth = maxHealth;
+    }
+
     public override void ApplyDamage(int damage)
     {
         currentHealth -= damage;

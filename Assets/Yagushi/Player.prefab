@@ -344,6 +344,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4307437439890442}
+  - component: {fileID: 95007516967838910}
   - component: {fileID: 54859175974852044}
   - component: {fileID: 136059061830606448}
   - component: {fileID: 114264520643173644}
@@ -352,6 +353,7 @@ GameObject:
   - component: {fileID: 114669229635748734}
   - component: {fileID: 114116769219952368}
   - component: {fileID: 135532962913837522}
+  - component: {fileID: 114795224061668982}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -367,7 +369,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4155517349929860}
-  - component: {fileID: 95257711656269212}
   m_Layer: 0
   m_Name: SD_QUERY_17
   m_TagString: Untagged
@@ -1129,13 +1130,13 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!95 &95257711656269212
+--- !u!95 &95007516967838910
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1729177742243166}
+  m_GameObject: {fileID: 1721425429366054}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 03be64f9c2417f842bdb69eb45c14f93, type: 3}
   m_Controller: {fileID: 9100000, guid: 148029f9a07cbca40a8f76a6d8be0c8a, type: 2}
@@ -1267,7 +1268,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f942acfe1b5e2bf459bd9d5a0222f2c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 95257711656269212}
+  animator: {fileID: 95007516967838910}
 --- !u!114 &114264520643173644
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1290,6 +1291,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb52e906f12cb054480bc45955a95edf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 3
+  playerAnimator: {fileID: 114116769219952368}
 --- !u!114 &114647914992506564
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1316,6 +1319,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMover: {fileID: 114647914992506564}
+--- !u!114 &114795224061668982
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1721425429366054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65d2ed78649f4134aa0dd448e8537532, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!135 &135532962913837522
 SphereCollider:
   m_ObjectHideFlags: 1

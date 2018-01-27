@@ -173,9 +173,11 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4310312734166270}
+  - component: {fileID: 95364072732417784}
   - component: {fileID: 136763512007402348}
   - component: {fileID: 114497909439978934}
   - component: {fileID: 114957066285459276}
+  - component: {fileID: 114320016287205072}
   m_Layer: 8
   m_Name: Player (Mirror)
   m_TagString: Untagged
@@ -269,7 +271,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4928769860478046}
-  - component: {fileID: 95726795148901480}
   m_Layer: 0
   m_Name: SD_QUERY_49
   m_TagString: Untagged
@@ -1078,13 +1079,13 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1605961708290288}
   m_Mesh: {fileID: 4300000, guid: c245b0d9bca33a846ba3a715d97da5bf, type: 3}
---- !u!95 &95726795148901480
+--- !u!95 &95364072732417784
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1615844768729150}
+  m_GameObject: {fileID: 1433461803166676}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 60b142d2aac02ff438e1dd531e016500, type: 3}
   m_Controller: {fileID: 22100000, guid: 2c813a6756f8738429fb8968274aef52, type: 2}
@@ -1188,6 +1189,17 @@ TrailRenderer:
     generateLightingData: 0
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
+--- !u!114 &114320016287205072
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1433461803166676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65d2ed78649f4134aa0dd448e8537532, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114497909439978934
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1212,7 +1224,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerAnimator: {fileID: 0}
-  animator: {fileID: 95726795148901480}
+  animator: {fileID: 95364072732417784}
 --- !u!136 &136763512007402348
 CapsuleCollider:
   m_ObjectHideFlags: 1

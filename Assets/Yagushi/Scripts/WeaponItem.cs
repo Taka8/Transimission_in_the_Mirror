@@ -6,11 +6,14 @@ using UnityEngine;
 public class WeaponItem : Item
 {
 
-    public int damageAmout;
+    public int damage;
+    public float force;
     public Sprite sprite;
     public Mesh mesh;
+    public Material material;
+    Vector3 offset;
 
-    public override void Use()
+    public override void Pickup()
     {
         
     }

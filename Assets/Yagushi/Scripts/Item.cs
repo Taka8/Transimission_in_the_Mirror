@@ -7,7 +7,7 @@ public class Item : ScriptableObject
 {
     new public string name = "Item";
     
-    public virtual void Use()
+    public virtual void Pickup()
     {
 
     }
