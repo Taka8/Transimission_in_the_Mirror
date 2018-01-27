@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Player : CharacterBase
 {
+    
+    public WeaponItem myWeapon;
 
     // Use this for initialization
     void Start()
@@ -16,5 +18,5 @@ public class Player : CharacterBase
     {
 
     }
-
+    
 }

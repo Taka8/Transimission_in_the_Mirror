@@ -5,30 +5,30 @@ using UnityEngine;
 public class PlayerAnimator : MonoBehaviour
 {
 
-    [SerializeField] Animator animator;
-    public float velocity { get; private set; }
-    public bool isAttacking { get; private set; }
+    [SerializeField] Animator[] animators;
 
-    private void Reset()
+    public void animateMove(float velocity)
     {
-        animator = GetComponentInChildren<Animator>();
-    }
-    
-    public void aanimateMove(float velocity)
-    {
-        this.velocity = velocity;
-        animator.SetFloat("Velocity", velocity);
+        foreach (Animator a in animators)
+        {
+            a.SetFloat("Velocity", velocity);
+        }
     }
 
     public void animateAttack(bool isAttacking)
     {
-        this.isAttacking = isAttacking;
-        animator.SetBool("Attack", isAttacking);
+        foreach (Animator a in animators)
+        {
+            a.SetBool("Attack", isAttacking);
+        }
     }
 
     public void animateDeath()
     {
-
+        foreach (Animator a in animators)
+        {
+            a.SetTrigger("Death");
+        }
     }
-    
+
 }

@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class PlayerAttackAnimEvent : MonoBehaviour {
 
+    public Player player;
     public List<IApplicableDamage> applicablesList = new List<IApplicableDamage>();
-    public PlayerWeaponManager playerWeapon;
-
+    
     void AttackEvent()
     {
         ApplyDamage();
@@ -16,7 +16,7 @@ public class PlayerAttackAnimEvent : MonoBehaviour {
     {
         foreach(IApplicableDamage ad in applicablesList)
         {
-            ad.ApplyDamage(playerWeapon.myWeapon.damage);
+            ad.ApplyDamage(player.myWeapon.damage);
         }
     }
 

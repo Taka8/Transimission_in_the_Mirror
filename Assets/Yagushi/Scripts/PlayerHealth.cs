@@ -2,39 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerHealth : CharacterHealth
-{
+public class PlayerHealth : MonoBehaviour {
 
-    private static PlayerHealth instance;
-    
-    public static PlayerHealth Instance
+    public static int health;
+    public static List<PlayerHealth> playerHealthList;
+
+    public static void Damage()
     {
-        get
-        {
-            if (instance == null)
-            {
-                instance = FindObjectOfType<PlayerHealth>();
-            }
 
-            return instance;
-        }
     }
 
-    [SerializeField] PlayerAnimator playerAnimator;
+    public static void Death()
+    {
 
-    void Reset()
-    {
-        playerAnimator = GetComponent<PlayerAnimator>();
-    }
-    
-    public override void ApplyDamage(int damage)
-    {
-        currentHealth -= damage;
-        if (currentHealth <= 0) Death();
     }
 
-    public override void Death()
-    {
-        playerAnimator.animateDeath();
-    }
 }

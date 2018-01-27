@@ -175,9 +175,10 @@ GameObject:
   - component: {fileID: 4310312734166270}
   - component: {fileID: 95364072732417784}
   - component: {fileID: 136763512007402348}
+  - component: {fileID: 114341064053370674}
   - component: {fileID: 114497909439978934}
-  - component: {fileID: 114957066285459276}
   - component: {fileID: 114320016287205072}
+  - component: {fileID: 135349002885893156}
   m_Layer: 8
   m_Name: Player (Mirror)
   m_TagString: Untagged
@@ -1200,6 +1201,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65d2ed78649f4134aa0dd448e8537532, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 114341064053370674}
+--- !u!114 &114341064053370674
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1433461803166676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 472ec7a782bfeaa40a3244686874c7d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myWeapon: {fileID: 11400000, guid: f94b13372e9b4f14ebc3bbdbaaea6d0e, type: 2}
 --- !u!114 &114497909439978934
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1212,19 +1226,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
---- !u!114 &114957066285459276
-MonoBehaviour:
+--- !u!135 &135349002885893156
+SphereCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1433461803166676}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07b1919adb08bcd4694d218730fe9314, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerAnimator: {fileID: 0}
-  animator: {fileID: 95364072732417784}
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0.5, z: 0.5}
 --- !u!136 &136763512007402348
 CapsuleCollider:
   m_ObjectHideFlags: 1

@@ -2,11 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class CharacterBase : MonoBehaviour{
-
-    protected void Awake()
-    {
-        
-    }
-
+public abstract class CharacterBase : MonoBehaviour
+{
+    
 }
