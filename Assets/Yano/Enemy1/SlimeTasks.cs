@@ -7,6 +7,7 @@ using UnityEngine.AI;
 public class SlimeTasks : MonoBehaviour
 {
     NavMeshAgent m_Agent;
+    public SimpleAnimationController sac;
 
     void Start()
     {
@@ -19,7 +20,30 @@ public class SlimeTasks : MonoBehaviour
         GameObject player = GameObject.Find("Player");
         m_Agent.destination = player.transform.position;
 
-        //rend.material.color = new Color(r, g, b);
-        //Task.current.Succeed(); // <-- Task.current gives access to the run-time task bind to this method.
+        sac.DoAction(SimpleAnimationController.Actions.Move);
+
+        Task.current.Succeed();
+    }
+
+    [Task]
+    void Idle()
+    {
+        //GameObject player = GameObject.Find("Player");
+        m_Agent.destination = transform.position; //player.transform.position;
+
+        sac.DoAction(SimpleAnimationController.Actions.Idle);
+
+        Task.current.Succeed();
+    }
+
+    [Task]
+    void Attack()
+    {
+        //GameObject player = GameObject.Find("Player");
+        m_Agent.destination = transform.position + Vector3.left;
+
+        sac.DoAction(SimpleAnimationController.Actions.Attack);
+
+        Task.current.Succeed();
     }
 }

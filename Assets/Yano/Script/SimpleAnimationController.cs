@@ -6,10 +6,12 @@ public class SimpleAnimationController : MonoBehaviour {
 
     public enum Actions
     {
-        move = 1,
-        attack = 2,
-        die = 3,
-        damage = 4,
+        Default = 0,
+        Move = 1,
+        Attack = 2,
+        Die = 3,
+        Damage = 4,
+        Idle = 5,
     }
 
     SimpleAnimation sa;
@@ -18,13 +20,13 @@ public class SimpleAnimationController : MonoBehaviour {
         sa = GetComponent<SimpleAnimation>();
 	}
 
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            DoAction(Actions.attack);
-        }
-    }
+    //void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.A))
+    //    {
+    //        DoAction(Actions.Attack);
+    //    }
+    //}
 
     public void DoAction(Actions action)
     {
