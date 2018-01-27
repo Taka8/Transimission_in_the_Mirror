@@ -1,0 +1,14 @@
+tree("Root")
+	sequence
+		//SetColor(1.0, 0.0, 0.0) //red
+		MoveToPlayer()		
+		Wait(5.0)
+
+		MoveToPlayer()
+		//SetColor(0.0, 1.0, 0.0) //green
+		Wait(5.0)
+
+		MoveToPlayer()
+		//SetColor(0.0, 0.0, 1.0) //blue
+		Wait(5.0)
+
